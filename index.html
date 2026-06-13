@@ -1,0 +1,115 @@
+<!--
+  Iris SSG v1.1.0 (2026-06-13)
+  Copyright (c) 2026 Stepan Vana
+  Licensed under the MIT License.
+  Full license text available at: https://github.com/stepan-vana/iris-ssg/blob/main/LICENSE
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris SSG</title>
+
+  <!-- Typography (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Tabler Icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <!-- Syntax Highlighting (Highlight.js) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hljs-light-theme" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+
+  <!-- LaTeX Rendering (KaTeX) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" defer></script>
+
+  <!-- Markdown Parser (Marked) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/script.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="">
+      <img src="assets/logo/iris_ssg.svg" alt="logo" />
+    </a>
+    <div class="nav-center">
+      <div class="search-container">
+       <div class="search-input-wrapper">
+  <i class="ti ti-search search-icon"></i>
+  <input
+    type="text"
+    id="docsSearchInput"
+    placeholder="Start searching..."
+    autocomplete="off"
+    maxlength="100"
+  />
+  <kbd class="search-shortcut" id="searchShortcut">Ctrl+K</kbd>
+</div>
+        <div id="searchResultsDropdown" class="search-results-dropdown"></div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <button class="navbar-button" onclick="window.open('https://github.com/stepan-vana/iris-ssg', '_blank')">
+        <img class="github-icon" src="assets/logo/github.svg" alt="" height="14" />
+        View on GitHub
+        <i class="ti ti-arrow-up-right"></i>
+      </button>
+      <button class="hamburger" id="hamburgerBtn">
+        <img src="assets/icons/list.svg" alt="menu" />
+      </button>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li class="sidebar-item">
+        <a href="">Home</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" data-md="docs/getting_started.md">Getting started</a>
+        <a href="#" data-md="docs/developer_guide.md">Developer guide</a>
+        <a href="#" data-md="docs/contributing.md">Contributing</a>
+        <a href="#" data-md="docs/licence.md">Licence</a>
+      </li>
+    </ul>
+
+    <p>Websites using Iris SSG</p>
+    <ul>
+      <li class="sidebar-item">
+        <a href="https://newtonslostapple.com/index.html" target="_blank">
+          Newton's Lost Apple
+          <i class="ti ti-arrow-up-right"></i>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-actions">
+      <button class="navbar-button" onclick="window.open('https://github.com/stepan-vana/iris-ssg', '_blank')">
+        <img class="github-icon" src="assets/logo/github.svg" alt="" height="14" />
+        View on GitHub
+        <i class="ti ti-arrow-up-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="content" id="content"></div>
+
+  <div class="sidebar-left">
+    <div class="toc-wrapper">
+      <div class="toc-track"></div>
+      <div class="toc-indicator" id="tocIndicator"></div>
+      <div class="toc" id="toc"></div>
+    </div>
+  </div>
+
+</body>
+</html>
